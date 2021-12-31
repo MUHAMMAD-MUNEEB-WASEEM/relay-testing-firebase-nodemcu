@@ -5,14 +5,15 @@ function GetData() {
 
     const [getList, setGetList] = useState();
 
-    useEffect(async ()=>{
+    useEffect( ()=>{
         const getDataRef = firebase.database().ref('test');
-        await getDataRef.on('value', (snapshot)=>{
+         getDataRef.on('value', (snapshot)=>{
             console.log(snapshot.val())
 
             const getData = snapshot.val();
-
-            const getList = [];
+            
+            
+            const getList = []
 
             for (let id in getData) {
                 getList.push(getData[id])
@@ -25,17 +26,22 @@ function GetData() {
         })
     },[getList])
 
-    console.log(getList)
+    // console.log(getList[0].float)
+    // console.log(getList[0].int)
     return (
        
             <div>
             
              {getList.map((data, index)=>(
-                <div key={index}>
-                    <h3>float: {data.float}</h3>
-                    <h3>Int: {data.int}</h3>
-                </div>
-            ))} 
+                 <>
+             {getList.length > 0 && (
+                <div>
+                <h3>float: {getList[0].float}</h3>
+                <h3>Int: {getList[0].int}</h3> 
+            </div>
+             )}
+               </> 
+             ))} 
         </div>
       
     )
