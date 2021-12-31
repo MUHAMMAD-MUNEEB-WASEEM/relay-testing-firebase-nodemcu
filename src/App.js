@@ -1,6 +1,7 @@
 import './App.css';
 import GetData from './components/GetData';
 import SendData from './components/SendData';
+import {getList} from './components/GetData';
 
 function App() {
   return (

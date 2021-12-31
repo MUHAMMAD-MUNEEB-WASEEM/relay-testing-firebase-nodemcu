@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
 import firebase from "../firebase"
 
+
 function GetData() {
 
-    const [getList, setGetList] = useState();
+     const [getList, setGetList] = useState();
 
     useEffect( ()=>{
         const getDataRef = firebase.database().ref('test');
