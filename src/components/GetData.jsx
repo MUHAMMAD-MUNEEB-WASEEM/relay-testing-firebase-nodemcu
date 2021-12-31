@@ -25,7 +25,7 @@ function GetData() {
             setGetList(getList);
 
         })
-    },[getList])
+    },[])
 
     // console.log(getList[0].float)
     // console.log(getList[0].int)
