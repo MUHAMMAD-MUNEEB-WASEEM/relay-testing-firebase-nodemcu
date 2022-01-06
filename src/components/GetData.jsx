@@ -6,43 +6,40 @@ function GetData() {
 
      const [getList, setGetList] = useState();
 
-    useEffect( ()=>{
-        const getDataRef = firebase.database().ref('test');
-         getDataRef.on('value', (snapshot)=>{
-            console.log(snapshot.val())
+     //For multiple values
 
-            const getData = snapshot.val();
-            
-            
-            const getList = []
+    // useEffect( ()=>{
+    //     const getDataRef = firebase.database().ref('test');
+    //      getDataRef.on('value', (snapshot)=>{
+    //         console.log(snapshot.val())
 
-            for (let id in getData) {
-                getList.push(getData[id])
-            }
+    //         const getData = snapshot.val();
             
-            // getList.push(getData);
             
-            setGetList(getList);
+    //         const getList = []
 
-        })
-    },[])
+    //         for (let id in getData) {
+    //             getList.push(getData[id])
+    //         }
+            
+    //         // getList.push(getData);
+            
+    //         setGetList(getList);
+
+    //     })
+    // },[])
 
     // console.log(getList[0].float)
     // console.log(getList[0].int)
+
+
+    //GEtting String
+
     return (
        
             <div>
             
-             {/* {getList .map((data, index)=>(
-                 <>
-             {getList.length > 0 && (
-                <div>
-                <h3>float: {getList[0].float}</h3>
-                <h3>Int: {getList[0].int}</h3> 
-            </div>
-             )}
-               </> 
-             ))}  */}
+            
 
                 {getList != null ? (
                 
