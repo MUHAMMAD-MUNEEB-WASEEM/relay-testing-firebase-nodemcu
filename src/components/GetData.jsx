@@ -33,7 +33,7 @@ function GetData() {
        
             <div>
             
-             {getList.map((data, index)=>(
+             {/* {getList .map((data, index)=>(
                  <>
              {getList.length > 0 && (
                 <div>
@@ -42,7 +42,24 @@ function GetData() {
             </div>
              )}
                </> 
-             ))} 
+             ))}  */}
+
+                {getList != null ? (
+                
+                <>
+                     {getList .map((data, index)=>(
+                            <>
+                        {getList.length > 0 && (
+                            <div>
+                            <h3>float: {getList[0].float}</h3>
+                            <h3>Int: {getList[0].int}</h3> 
+                        </div>
+                        )}
+                        </> 
+                        ))} 
+                
+                </>):(<div>Please Enter Data Above</div>)}
+                   
         </div>
       
     )
