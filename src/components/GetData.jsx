@@ -35,13 +35,28 @@ function GetData() {
 
     //GEtting String
 
+    const [string, setString] = useState("");
+
+     useEffect( ()=>{
+        const getDataRef = firebase.database().ref('test/current/str');
+         getDataRef.on('value', (snapshot)=>{
+            console.log(snapshot.val())
+
+            setString(snapshot.val());
+            
+
+        })
+    },[])
+
+    console.log(string);
+
     return (
        
             <div>
             
             
 
-                {getList != null ? (
+                {/* {getList != null ? (
                 
                 <>
                      {getList .map((data, index)=>(
@@ -55,7 +70,9 @@ function GetData() {
                         </> 
                         ))} 
                 
-                </>):(<div>Please Enter Data Above</div>)}
+                </>):(<div>Please Enter Data Above</div>)} */}
+
+                <h1>{string}</h1>
                    
         </div>
       
