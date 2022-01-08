@@ -1,15 +1,15 @@
 import './App.css';
-import GetData from './components/GetData';
-import SendData from './components/SendData';
-import {getList} from './components/GetData';
+import GetData from './components/GetData/GetData';
+import SendData from './components/SendData/SendData';
 
 function App() {
   return (
     <div className="App">
-      <h1>Muneeb</h1>
-      <h2>Sending Data to Firebase</h2>
-      <SendData/>
-      <h2>Getting Data from Firebase</h2>
+      <div className='heading__container'><h1 className='app__heading'>Relay Testing App</h1></div>
+      <div className='app__sendData'>
+        <SendData/>
+      </div>
+      
       <GetData/>
     </div>
   );

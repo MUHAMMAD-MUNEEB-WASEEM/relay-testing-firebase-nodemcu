@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
-import firebase from "../firebase"
+import firebase from "../../firebase"
+
+import './GetData.css';
 
 
 function GetData() {
@@ -52,7 +54,7 @@ function GetData() {
 
     return (
        
-            <div>
+            <div className="getData">
             
             
 
@@ -72,7 +74,9 @@ function GetData() {
                 
                 </>):(<div>Please Enter Data Above</div>)} */}
 
-                <h1>{string}</h1>
+                {/* <h1>{string}</h1> */}
+                <div className="getData__heading"><h1>Double Line To Ground Fault</h1></div>
+                
                    
         </div>
       

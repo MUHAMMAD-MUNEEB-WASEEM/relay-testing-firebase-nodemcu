@@ -1,0 +1,10 @@
+.getData{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.getData__heading > h1 {
+    color: red;
+    font-size: 50px;
+}
